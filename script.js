@@ -46,19 +46,7 @@ skills.forEach(skill => {
 const form = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
 
-  if (!form.checkValidity()) {
-    formMessage.textContent = "Please fill all fields correctly.";
-    formMessage.style.color = "red";
-    return;
-  }
-
-  formMessage.textContent = "Message sent successfully!";
-  formMessage.style.color = "green";
-  form.reset();
-});
 const fire = document.querySelector(".fire");
 const image = document.querySelector(".profile-img");
 
@@ -99,3 +87,4 @@ form.addEventListener("submit", function(e) {
   });
 
 });
+
