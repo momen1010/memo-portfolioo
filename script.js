@@ -71,3 +71,31 @@ image.addEventListener("mouseenter", () => {
 image.addEventListener("mouseleave", () => {
   fire.style.display = "none";
 });
+
+emailjs.init("MCY4smX2J_9LNKusY");
+
+const form = document.getElementById("contactForm");
+const message = document.getElementById("formMessage");
+
+form.addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_y2hkg9l",
+    "template_l4nnxx8",
+    this
+  ).then(function() {
+
+      message.textContent = "Message Sent Successfully!";
+      message.style.color = "green";
+      form.reset();
+
+  }, function(error) {
+
+      message.textContent = "Failed to send message";
+      message.style.color = "red";
+
+  });
+
+});
