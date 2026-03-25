@@ -577,3 +577,14 @@ input:focus, textarea:focus {
 
 .glitch { animation: none; } /* Removed glitch */
 .section { background-attachment: fixed; }
+/* للأجهزة المحمولة والشاشات الصغيرة (أقل من 768 بكسل) */
+@media (max-width: 768px) {
+  /* تحويل شبكة المشاريع والمهارات إلى عمود واحد */
+  .projects-container, 
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* عرض كارت واحد في كل صف */
+    gap: 20px; /* مسافة بين الكروت */
+    padding: 10px;
+  }
+}
